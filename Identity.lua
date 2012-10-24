@@ -2,11 +2,12 @@
 
 Identity = {} -- the table to hold the class
 
-Identity.new = function(unique_id)
+Identity.new = function(unique_id, first_name)
 	-- private properties
 	local self = {} -- object of class
 	
 	unique_id = unique_id or math.random(1000000);
+	first_name = first_name or "unknown"
 	gender = "unknown"
 	age = -1 -- unknown
 	alive = true
@@ -28,6 +29,7 @@ Identity.new = function(unique_id)
 	
 	self.show = function()
 		print("Idenity: " .. unique_id 
+		.. ", First Name: " .. first_name 
 		.. ", Gender: " .. gender 
 		.. ", Age: " .. age 
 		.. ", Alive: " .. tostring(alive) 
@@ -39,7 +41,7 @@ end
 
 -- unit tests
 
-test_identity = Identity.new("John")
+test_identity = Identity.new(1223345, "Tony")
 test_identity.show()
 
 test2_identity = Identity.new()
