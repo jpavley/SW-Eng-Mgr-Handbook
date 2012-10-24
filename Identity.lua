@@ -6,7 +6,7 @@ Identity.new = function(unique_id)
 	-- private properties
 	local self = {} -- object of class
 	
-	unique_id = unique_id or math.random(1000);
+	unique_id = unique_id or math.random(1000000);
 	gender = "unknown"
 	age = -1 -- unknown
 	alive = true
@@ -42,7 +42,10 @@ end
 test_identity = Identity.new("John")
 test_identity.show()
 
-test_identity = Identity.new()
-test_identity.show()
+test2_identity = Identity.new()
+test2_identity.show()
+
+test3_identity = Identity.new()
+test3_identity.show()
 
 
