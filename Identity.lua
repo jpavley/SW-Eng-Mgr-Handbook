@@ -2,12 +2,13 @@
 
 Identity = {} -- the table to hold the class
 
-Identity.new = function(unique_id, first_name)
+Identity.new = function(unique_id, first_name, last_name)
 	-- private properties
 	local self = {} -- object of class
 	
 	unique_id = unique_id or math.random(1000000);
 	first_name = first_name or "unknown"
+	last_name = last_name or "unknow"
 	gender = "unknown"
 	age = -1 -- unknown
 	alive = true
