@@ -1,34 +1,35 @@
 #!/usr/bin/env lua
 
+require "constants"
+
 Identity = {} -- the table to hold the class
 
 Identity.new = function(unique_id, first_name, last_name)
-	-- private properties
 	local self = {} -- object of class
 	
-	unique_id = unique_id or "unknown";
-	first_name = first_name or "unknown"
-	last_name = last_name or "unknow"
-	gender = "unknown"
-	age = -1 -- unknown
-	alive = true
-	personality = {}
+	-- private properties
+	unique_id = unique_id or constants.kUnknownString
+	first_name = constants.kUnknownString
+	middle_name = constants.kUnknownString
+	last_name = constants.kUnknownString
+	gender = constants.kGenderUnknown
+	date_of_birth = constants.kUnknownDate
 	
 	-- public getters
+	self.get_unique_id = function() return unique_id end
 	self.get_gender = function() return gender end
-	self.get_age = function() return age end
-	self.is_alive = function() return alive end
-	self.get_personality = function() return personality end
 	self.get_first_name = function() return first_name end
 	self.get_last_name = function() return last_name end
+	self.get_middle_name = function() return middle_name end
+	self.get_date_of_birth = function() return date_of_birth end
 	
 	-- public setters
-	self.set_gender = function(g) gender = g end
-	self.set_age = function(a) age = a end
-	self.set_alive = function(a) alive = a end
-	self.set_personality = function(p) personality = p end
-	self.set_first_name = function(fn) first_name = fn end
-	self.set_last_name = function(ln) last_name =ln end
+	self.set_unique_id = function(num) unique_id = num end
+	self.set_gender = function(str) gender = str end
+	self.set_first_name = function(str) first_name = str end
+	self.set_last_name = function(str) last_name = str end
+	self.set_middle_name = function(str) middle_name = str end
+	self.set_date_of_birth = function(str) date_of_birth = str end
 
 
 	-- public methods
@@ -36,11 +37,10 @@ Identity.new = function(unique_id, first_name, last_name)
 	self.show = function()
 		print("Idenity: " .. unique_id 
 		.. ", First Name: " .. first_name 
+		.. ", Middle Name: " .. middle_name
 		.. ", Last Name: " .. last_name 
-		.. ", Gender: " .. gender 
-		.. ", Age: " .. age 
-		.. ", Alive: " .. tostring(alive) 
-		.. ", Personality: " .. table.concat(personality, ", "))	
+		.. ". Date of Birth: " .. date_of_birth 
+		.. ", Gender: " .. gender)
 	end
 		
 	return self -- return the object!
@@ -48,13 +48,10 @@ end
 
 -- unit tests
 
-test_identity = Identity.new("111-11-111", "Tony")
-test_identity.set_gender("male")
-test_identity.set_age(27)
-test_identity.set_alive(true)
-test_identity.set_personality({"loner", "quiet", "thoughtful"})
-test_identity.set_first_name("Charlies")
-test_identity.set_last_name("Darwin")
+test_identity = Identity.new("111-11-111", "Charles", "Darwin")
+test_identity.set_gender(constants.kGenderMale)
+test_identity.set_middle_name("Robert")
+test_identity.set_date_of_birth(os.date("%d/%m/%y"))
 test_identity.show()
 
 test2_identity = Identity.new()
