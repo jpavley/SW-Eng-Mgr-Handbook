@@ -1,6 +1,13 @@
-#!/usr/bin/env lua
-
 require "constants"
+
+-- ----------------------------------------------------------------------------
+-- Identity Class
+-- ----------------------------------------------------------------------------
+-- Represents PII (Personally identifiable information)
+-- From the Wikipedia: nformation that can be used to uniquely identify, 
+-- contact, or locate a single person or can be used with other sources 
+-- to uniquely identify a single individual.
+-- ----------------------------------------------------------------------------
 
 Identity = {} -- the table to hold the class
 
