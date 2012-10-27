@@ -1,3 +1,4 @@
+module(..., package.seeall)
 require "constants"
 
 -- ----------------------------------------------------------------------------
@@ -52,15 +53,3 @@ Identity.new = function(unique_id, first_name, last_name)
 		
 	return self -- return the object!
 end
-
--- unit tests
-
-test_identity = Identity.new("111-11-111", "Charles", "Darwin")
-test_identity.set_gender(constants.kGenderMale)
-test_identity.set_middle_name("Robert")
-test_identity.set_date_of_birth(os.date("%d/%m/%y"))
-test_identity.show()
-
-test2_identity = Identity.new()
-test2_identity.show()
-
