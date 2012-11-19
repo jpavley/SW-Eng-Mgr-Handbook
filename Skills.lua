@@ -71,6 +71,16 @@ Skills.new = function(unique_id)
    
 	-- public getters
 	self.get_unique_id = function() return unique_id end
+    self.get_verbal_expression_score = function() return verbal_expression_score end
+    self.get_written_expression_score = function() return written_expression_scor end
+    self.get_time_management_score = function() return time_management_score end
+    self.get_cooperation_ability_score = function() return cooperation_ability_score end
+    self.get_coping_ability_score = function() return coping_ability_score end
+    self.get_learning_ability_score = function() return learning_ability_score end
+    self.get_listening_ability_score = function() return listening_ability_scor end
+    self.get_problem_solving_score = function() return problem_solving_score end
+    self.get_enthusiasm_score = function() return enthusiasm_score end
+    self.get_flexibility_score = function() return flexibility_score end
 
 	
 	-- public setters
