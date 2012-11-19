@@ -40,7 +40,6 @@ Skills.new = function(unique_id)
 	-- roles: QA, Scrum Master, Tech Manager, UX Designer, etc ...)
     -- Scale: 0 = poor, 3 = below average 5 = average, 7 = above average, 10 = outstanding
 
-	
 	unix_admin_score = constants.kUnknownNumber
     software_patterns_score = constants.kUnknownNumber
     oop_concepts_score = constants.kUnknownNumber
@@ -55,7 +54,7 @@ Skills.new = function(unique_id)
     -- List of top 10 language and tool skills for sofware developers
     -- (This section should be different for different types of technical
     -- roles: QA, Scrum Master, Tech Manager, UX Designer, etc ...)
-       -- Scale: 0 = poor, 3 = below average 5 = average, 7 = above average, 10 = outstanding
+    -- Scale: 0 = poor, 3 = below average 5 = average, 7 = above average, 10 = outstanding
     
     c_language_score = constants.kUnknownNumber
     python_language_score = constants.kUnknownNumber
@@ -68,16 +67,16 @@ Skills.new = function(unique_id)
     html_lanaguage_score = constants.kUnknownNumber
     css_language_score = constants.kUnknownNumber
     
-   
 	-- public getters
 	self.get_unique_id = function() return unique_id end
+
     self.get_verbal_expression_score = function() return verbal_expression_score end
-    self.get_written_expression_score = function() return written_expression_scor end
+    self.get_written_expression_score = function() return written_expression_score end
     self.get_time_management_score = function() return time_management_score end
     self.get_cooperation_ability_score = function() return cooperation_ability_score end
     self.get_coping_ability_score = function() return coping_ability_score end
     self.get_learning_ability_score = function() return learning_ability_score end
-    self.get_listening_ability_score = function() return listening_ability_scor end
+    self.get_listening_ability_score = function() return listening_ability_score end
     self.get_problem_solving_score = function() return problem_solving_score end
     self.get_enthusiasm_score = function() return enthusiasm_score end
     self.get_flexibility_score = function() return flexibility_score end
@@ -107,10 +106,66 @@ Skills.new = function(unique_id)
 	-- public setters
 	self.set_unique_id = function(num) unique_id = num end
 
+    self.set_verbal_expression_score = function(num) verbal_expression_score = num end
+    self.set_written_expression_score = function(num) written_expression_score = num end
+    self.set_time_management_score = function(num) time_management_score = num end
+    self.set_cooperation_ability_score = function(num) cooperation_ability_score = num end
+    self.set_coping_ability_score = function(num) coping_ability_score = num end
+    self.set_learning_ability_score = function(num) learning_ability_score = num end
+    self.set_listening_ability_score = function(num) listening_ability_score = num end
+    self.set_problem_solving_score = function(num) problem_solving_score = num end
+    self.set_enthusiasm_score = function(num) enthusiasm_score = num end
+    self.set_flexibility_score = function(num) flexibility_score = num end
+    
+    self.set_unix_admin_score = function(num) unix_admin_score = num end
+    self.set_software_patterns_score = function(num) software_patterns_score = num end
+    self.set_oop_concepts_score = function(num) oop_concepts_score = num end
+    self.set_functional_concepts_score = function(num) functional_concepts_score = num end
+    self.set_system_desgin_score = function(num) system_desgin_score = num end
+    self.set_security_design_score = function(num) security_design_score = num end
+    self.set_agile_concepts_score = function(num) agile_concepts_score = num end
+    self.set_debugging_concepts_score = function(num) debugging_concepts_score = num end
+    self.set_backend_architecture_score = function(num) backend_architecture_score = num end
+    self.set_client_architecture_score = function(num) client_architecture_score = num end
+    
+    self.set_c_language_score = function(num) c_language_score = num end
+    self.set_python_language_score = function(num) python_language_score = num end
+    self.set_php_language_score = function(num) php_language_score = num end
+    self.set_cpp_langague_score = function(num) cpp_langague_score = num end
+    self.set_java_language_acore = function(num) java_language_acore = num end
+    self.set_perl_langague_score = function(num) perl_langague_score = num end
+    self.set_ruby_language_score = function(num) ruby_language_score = num end
+    self.set_javascript_language_score = function(num) javascript_language_score = num end
+    self.set_html_lanaguage_score = function(num) html_lanaguage_score = num end
+    self.set_css_language_score = function(num) css_language_score = num end
+
 	-- public methods
 	
 	self.show = function()
-		print("Skills: " .. unique_id)
+		print("Skills: " .. unique_id
+        .. ", **Dommain General Skills**: "
+        .. " Verbal Expression: " .. verbal_expression_score
+        .. ", Written Expression: " .. written_expression_score
+        .. ", Time Management: " .. time_management_score
+        .. ", Cooperation Ability: " .. cooperation_ability_score
+        .. ", Coping Ability: " .. coping_ability_score
+        .. ", Learning Ability: " .. learning_ability_score
+        .. ", Listening Ability: " .. listening_ability_score
+        .. ", Problem Solving: " .. problem_solving_score
+        .. ", Enthusiam: " .. enthusiasm_score
+        .. ", Flexibility: " .. flexibility_score
+        .. ", **Dommain Specific Skills**: "
+        .. " Unix Admin: " ..     unix_admin_score
+        .. ", Software Patterns: " ..     software_patterns_score
+        .. ", OOP Concepts: " ..     oop_concepts_score
+        .. ", Functional Concepts: " ..     functional_concepts_score
+        .. ", System Design: " ..     system_desgin_score
+        .. ", Security Design: " ..     security_design_score
+        .. ", Agile Concepts: " ..     agile_concepts_score
+        .. ", Debugging Concepts: " ..     debugging_concepts_score
+        .. ", Backend Architecture: " ..     backend_architecture_score
+        .. ", Client Architecture: " ..    client_architecture_score)
+
 	end
 		
 	return self -- return the object!

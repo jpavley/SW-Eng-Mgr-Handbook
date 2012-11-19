@@ -1,6 +1,7 @@
 require "constants"
 require "Identity"
 require "Personality"
+require "Skills"
 
 -- Identity unit tests
 
@@ -30,6 +31,12 @@ test2_personality.set_extraversion_score(2)
 test2_personality.set_agreeableness_score(3)
 test2_personality.set_neuroticism_score(4)
 test2_personality.show()
+
+-- Skills unit tests
+print("--- Skills ---")
+test1_skills = Skills.Skills.new()
+test1_skills.show()
+
 
 -- Composite person tests
 

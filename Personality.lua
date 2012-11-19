@@ -80,7 +80,7 @@ Personality.new = function(unique_id)
 		.. ", Conscientiousness: " .. conscientiousness_score
 		.. ". Extraversion: " .. extraversion_score
 		.. ", Agreeableness: " .. agreeableness_score
-		.. ". Neuroticism: " .. neuroticism_score)
+		.. ", Neuroticism: " .. neuroticism_score)
 
 	end
 		

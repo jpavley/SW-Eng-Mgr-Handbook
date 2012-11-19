@@ -47,7 +47,7 @@ Identity.new = function(unique_id, first_name, last_name)
 		.. ", First Name: " .. first_name 
 		.. ", Middle Name: " .. middle_name
 		.. ", Last Name: " .. last_name 
-		.. ". Date of Birth: " .. date_of_birth 
+		.. ", Date of Birth: " .. date_of_birth 
 		.. ", Gender: " .. gender)
 	end
 		
