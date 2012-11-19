@@ -38,9 +38,37 @@ Skills.new = function(unique_id)
 	-- List of top 10 domain-specific skills for software developers
 	-- (This section should be different for different types of technical
 	-- roles: QA, Scrum Master, Tech Manager, UX Designer, etc ...)
-	
-	
+    -- Scale: 0 = poor, 3 = below average 5 = average, 7 = above average, 10 = outstanding
 
+	
+	unix_admin_score = constants.kUnknownNumber
+    software_patterns_score = constants.kUnknownNumber
+    oop_concepts_score = constants.kUnknownNumber
+    functional_concepts_score = constants.kUnknownNumber
+    system_desgin_score = constants.kUnknownNumber
+    security_design_score = constants.kUnknownNumber
+    agile_concepts_score = constants.kUnknownNumber
+    debugging_concepts_score = constants.kUnknownNumber
+    backend_architecture_score = constants.kUnknownNumber
+    client_architecture_score = constants.kUnknownNumber
+    
+    -- List of top 10 language and tool skills for sofware developers
+    -- (This section should be different for different types of technical
+    -- roles: QA, Scrum Master, Tech Manager, UX Designer, etc ...)
+       -- Scale: 0 = poor, 3 = below average 5 = average, 7 = above average, 10 = outstanding
+    
+    c_language_score = constants.kUnknownNumber
+    python_language_score = constants.kUnknownNumber
+    php_language_score = constants.kUnknownNumber
+    cpp_langague_score = constants.kUnknownNumber
+    java_language_acore = constants.kUnknownNumber
+    perl_langague_score = constants.kUnknownNumber
+    ruby_language_score = constants.kUnknownNumber
+    javascript_language_score = constants.kUnknownNumber
+    html_lanaguage_score = constants.kUnknownNumber
+    css_language_score = constants.kUnknownNumber
+    
+   
 	-- public getters
 	self.get_unique_id = function() return unique_id end
 
