@@ -92,8 +92,17 @@ Skills.new = function(unique_id)
     self.get_debugging_concepts_score = function() return debugging_concepts_score end
     self.get_backend_architecture_score = function() return backend_architecture_score end
     self.get_client_architecture_score = function() return client_architecture_score end
-
-
+    
+    self.get_c_language_score = function() return c_language_score end
+    self.get_python_language_score = function() return python_language_score end
+    self.get_php_language_score = function() return php_language_score end
+    self.get_cpp_langague_score = function() return cpp_langague_score end
+    self.get_java_language_acore = function() return java_language_acore end
+    self.get_perl_langague_score = function() return perl_langague_score end
+    self.get_ruby_language_score = function() return ruby_language_score end
+    self.get_javascript_language_score = function() return javascript_language_score end
+    self.get_html_lanaguage_score = function() return html_lanaguage_score end
+    self.get_css_language_score = function() return css_language_score end
 	
 	-- public setters
 	self.set_unique_id = function(num) unique_id = num end
