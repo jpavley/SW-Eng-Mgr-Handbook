@@ -81,6 +81,18 @@ Skills.new = function(unique_id)
     self.get_problem_solving_score = function() return problem_solving_score end
     self.get_enthusiasm_score = function() return enthusiasm_score end
     self.get_flexibility_score = function() return flexibility_score end
+    
+    self.get_unix_admin_score = function() return unix_admin_score end
+    self.get_software_patterns_score = function() return software_patterns_score end
+    self.get_oop_concepts_score = function() return oop_concepts_score end
+    self.get_functional_concepts_score = function() return functional_concepts_score end
+    self.get_system_desgin_score = function() return system_desgin_score end
+    self.get_security_design_score = function() return security_design_score end
+    self.get_agile_concepts_score = function() return agile_concepts_score end
+    self.get_debugging_concepts_score = function() return debugging_concepts_score end
+    self.get_backend_architecture_score = function() return backend_architecture_score end
+    self.get_client_architecture_score = function() return client_architecture_score end
+
 
 	
 	-- public setters
