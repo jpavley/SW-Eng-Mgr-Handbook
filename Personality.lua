@@ -12,9 +12,9 @@ require "constants"
 -- in various situations. 
 -- ----------------------------------------------------------------------------
 
-Personality = {} -- the table to hold the class
+Class = {} -- the table to hold the class
 
-Personality.new = function(unique_id)
+Class.new = function(unique_id)
 	local self = {} -- object of class
 	
 	-- private properties
@@ -75,7 +75,8 @@ Personality.new = function(unique_id)
 	-- public methods
 	
 	self.show = function()
-		print("Personality: " .. unique_id
+		print("**Personality**: "
+        .. "ID: " .. unique_id 
 		.. ". Openess: " .. openess_score 
 		.. ", Conscientiousness: " .. conscientiousness_score
 		.. ". Extraversion: " .. extraversion_score

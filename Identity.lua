@@ -10,9 +10,9 @@ require "constants"
 -- to uniquely identify a single individual.
 -- ----------------------------------------------------------------------------
 
-Identity = {} -- the table to hold the class
+Class = {} -- the table to hold the class
 
-Identity.new = function(unique_id, first_name, last_name)
+Class.new = function(unique_id, first_name, last_name)
 	local self = {} -- object of class
 	
 	-- private properties
@@ -43,7 +43,8 @@ Identity.new = function(unique_id, first_name, last_name)
 	-- public methods
 	
 	self.show = function()
-		print("Idenity: " .. unique_id 
+		print("**Idenity**: " 
+        .. "ID: " .. unique_id 
 		.. ", First Name: " .. first_name 
 		.. ", Middle Name: " .. middle_name
 		.. ", Last Name: " .. last_name 

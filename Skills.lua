@@ -12,9 +12,9 @@ require "constants"
 -- domain-general and domain-specific skills. 
 -- ----------------------------------------------------------------------------
 
-Skills = {} -- the table to hold the class
+Class = {} -- the table to hold the class
 
-Skills.new = function(unique_id)
+Class.new = function(unique_id)
 	local self = {} -- object of class
 	
 	-- private properties
@@ -51,7 +51,7 @@ Skills.new = function(unique_id)
     backend_architecture_score = constants.kUnknownNumber
     client_architecture_score = constants.kUnknownNumber
     
-    -- List of top 10 language and tool skills for sofware developers
+    -- List of top 10 language skills for sofware developers
     -- (This section should be different for different types of technical
     -- roles: QA, Scrum Master, Tech Manager, UX Designer, etc ...)
     -- Scale: 0 = poor, 3 = below average 5 = average, 7 = above average, 10 = outstanding
@@ -142,8 +142,9 @@ Skills.new = function(unique_id)
 	-- public methods
 	
 	self.show = function()
-		print("Skills: " .. unique_id
-        .. ", **Dommain General Skills**: "
+		print("** Skills**: "
+        .. "ID: " .. unique_id
+        .. ", *Domain General Skills*: "
         .. " Verbal Expression: " .. verbal_expression_score
         .. ", Written Expression: " .. written_expression_score
         .. ", Time Management: " .. time_management_score
@@ -154,7 +155,7 @@ Skills.new = function(unique_id)
         .. ", Problem Solving: " .. problem_solving_score
         .. ", Enthusiam: " .. enthusiasm_score
         .. ", Flexibility: " .. flexibility_score
-        .. ", **Dommain Specific Skills**: "
+        .. ", **Domain Specific Skills**: "
         .. " Unix Admin: " ..     unix_admin_score
         .. ", Software Patterns: " ..     software_patterns_score
         .. ", OOP Concepts: " ..     oop_concepts_score
@@ -164,7 +165,18 @@ Skills.new = function(unique_id)
         .. ", Agile Concepts: " ..     agile_concepts_score
         .. ", Debugging Concepts: " ..     debugging_concepts_score
         .. ", Backend Architecture: " ..     backend_architecture_score
-        .. ", Client Architecture: " ..    client_architecture_score)
+        .. ", Client Architecture: " ..    client_architecture_score
+        .. ", *Language Skills*: "
+        .. " C: " ..     c_language_score
+        .. ", Python: " ..     python_language_score
+        .. ", PHP: " ..     php_language_score
+        .. ", C++: " ..     cpp_langague_score
+        .. ", Java: " ..     java_language_acore
+        .. ", Perl: " ..     perl_langague_score
+        .. ", Ruby: " ..     ruby_language_score
+        .. ", JavaScript: " ..     javascript_language_score
+        .. ", HTML: " ..     html_lanaguage_score
+        .. ", CSS: " ..    css_language_score)
 
 	end
 		
