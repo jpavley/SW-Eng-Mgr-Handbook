@@ -24,21 +24,6 @@
     CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
     CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-    Usage:
-
-        require "constants"
-        require "Identity"
-        test2_identity = Identity.Class.new("111-11-111", "Charles", "Darwin")
-        test2_identity.set_gender(constants.kGenderMale)
-        test2_identity.set_middle_name("Robert")
-        test2_identity.set_date_of_birth(os.date("%d/%m/%y"))
-        test2_identity.show()
- 
-    Notes:
-    
-        1. Requires constants.lua
-
-
 --]]
 
 module(..., package.seeall)
