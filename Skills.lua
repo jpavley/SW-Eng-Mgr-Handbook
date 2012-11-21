@@ -155,7 +155,7 @@ Class.new = function(unique_id)
         .. ", Problem Solving: " .. problem_solving_score
         .. ", Enthusiam: " .. enthusiasm_score
         .. ", Flexibility: " .. flexibility_score
-        .. ", **Domain Specific Skills**: "
+        .. ", *Domain Specific Skills*: "
         .. " Unix Admin: " ..     unix_admin_score
         .. ", Software Patterns: " ..     software_patterns_score
         .. ", OOP Concepts: " ..     oop_concepts_score

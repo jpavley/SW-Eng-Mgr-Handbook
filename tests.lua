@@ -2,7 +2,6 @@ require "constants"
 require "Identity"
 require "Personality"
 require "Skills"
-
 -- Identity unit tests
 
 print("--- Identity ---")
@@ -15,7 +14,6 @@ test2_identity.set_gender(constants.kGenderMale)
 test2_identity.set_middle_name("Robert")
 test2_identity.set_date_of_birth(os.date("%d/%m/%y"))
 test2_identity.show()
-
 
 -- Personality unit tests
 
@@ -58,4 +56,3 @@ person.skills = test2_skills
 person.identity.show()
 person.personality.show()
 person.skills.show()
-
