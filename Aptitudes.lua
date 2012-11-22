@@ -75,14 +75,19 @@
 		
 	 	-- public getters
 		self.get_unique_id = function() return properties.unique_id end
-		self.abstract_reasoning_potential = function() return properties.abstract_reasoning_potential end
-		self.strategic_reasoning_potential = function() return properties.strategic_reasoning_potential end
-		self.practical_reasoning_potential = function() return properties.practical_reasoning_potential end
-		self.realtime_reasoning_potential = function() return properties.realtime_reasoning_potential end
-		self.visual_reasoning_potential = function() return properties.visual_reasoning_potential end
+		self.get_abstract_reasoning_potential = function() return properties.abstract_reasoning_potential end
+		self.get_strategic_reasoning_potential = function() return properties.strategic_reasoning_potential end
+		self.get_practical_reasoning_potential = function() return properties.practical_reasoning_potential end
+		self.get_realtime_reasoning_potential = function() return properties.realtime_reasoning_potential end
+		self.get_visual_reasoning_potential = function() return properties.visual_reasoning_potential end
 		
 		-- public setters
 		self.set_unique_id = function(num) properties.unique_id = num end
+		self.set_abstract_reasoning_potential = function(num) properties.abstract_reasoning_potential = num end
+		self.set_strategic_reasoning_potential = function(num) properties.strategic_reasoning_potential = num end
+		self.set_practical_reasoning_potential = function(num) properties.practical_reasoning_potential = num end
+		self.set_realtime_reasoning_potential = function(num) properties.realtime_reasoning_potential = num end
+		self.set_visual_reasoning_potential = function(num) properties.visual_reasoning_potential = num end
 		-- public methods
 		
 		self.show = function()

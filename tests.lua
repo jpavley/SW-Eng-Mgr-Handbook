@@ -79,9 +79,17 @@ test2_skills.set_flexibility_score(1)
 test2_skills.show()
 
 -- Aptitudes unit tests
-
+print("--- Aptitudes ---")
 test1_aptitudes = Aptitudes.Class.new()
 test1_aptitudes.show()
+
+test2_aptitudes = Aptitudes.Class.new("111-111-111")
+test2_aptitudes.set_abstract_reasoning_potential(5)
+test2_aptitudes.set_strategic_reasoning_potential(4)
+test2_aptitudes.set_practical_reasoning_potential(3)
+test2_aptitudes.set_realtime_reasoning_potential(2)
+test2_aptitudes.set_visual_reasoning_potential(1)
+test2_aptitudes.show()
 
 -- Composite person tests
 
@@ -92,7 +100,9 @@ person = {}
 person.identity = test2_identity
 person.personality = test2_personality
 person.skills = test2_skills
+person.aptitudes = test2_aptitudes
 
 person.identity.show()
 person.personality.show()
 person.skills.show()
+person.aptitudes.show()
