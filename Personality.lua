@@ -49,7 +49,7 @@ Class.new = function(unique_id)
 	
 	-- private properties
     
-    properties = {
+    local properties = {
 
 	["unique_id"] = unique_id or constants.kUnknownString,
 	

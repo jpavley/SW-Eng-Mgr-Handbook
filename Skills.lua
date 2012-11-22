@@ -28,6 +28,7 @@
 
 module(..., package.seeall)
 require "constants"
+require "Json"
 
 -- ----------------------------------------------------------------------------
 -- Skills Class

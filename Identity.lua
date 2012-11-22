@@ -45,12 +45,16 @@ Class.new = function(unique_id, first_name, last_name)
 	local self = {} -- object of class
 	
 	-- private properties
-	properties  = { ["unique_id"] = unique_id or constants.kUnknownString, 
-                    ["first_name"] = first_name or constants.kUnknownString,
-                    ["middle_name"] = constants.kUnknownString,
-                    ["last_name"] = last_name or constants.kUnknownString,
-                    ["gender"] = constants.kGenderUnknown,
-                    ["date_of_birth"] = constants.kUnknownDate }
+	local properties  = { 
+		
+		["unique_id"] = unique_id or constants.kUnknownString, 
+	    ["first_name"] = first_name or constants.kUnknownString,
+	    ["middle_name"] = constants.kUnknownString,
+	    ["last_name"] = last_name or constants.kUnknownString,
+	    ["gender"] = constants.kGenderUnknown,
+	    ["date_of_birth"] = constants.kUnknownDate 
+	
+	}
                 
  	-- public getters
 	self.get_unique_id = function() return properties.unique_id end
