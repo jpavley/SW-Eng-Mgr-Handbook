@@ -61,6 +61,10 @@
 			-- members are unblocked.
 			
 			["unique_id"] = unique_id or constants.kUnknownString,
+			
+		    -- Scale: 0 = poor, 3 = below average 5 = average, 7 = above average, 10 = outstanding
+			-- TODO: Add weights to each skill
+			
 			["abstract_reasoning_potential"] = constants.kUnknownNumber,
 			["strategic_reasoning_potential"] = constants.kUnknownNumber,
 			["practical_reasoning_potential"] = constants.kUnknownNumber,
@@ -71,6 +75,11 @@
 		
 	 	-- public getters
 		self.get_unique_id = function() return properties.unique_id end
+		self.abstract_reasoning_potential = function() return properties.abstract_reasoning_potential end
+		self.strategic_reasoning_potential = function() return properties.strategic_reasoning_potential end
+		self.practical_reasoning_potential = function() return properties.practical_reasoning_potential end
+		self.realtime_reasoning_potential = function() return properties.realtime_reasoning_potential end
+		self.visual_reasoning_potential = function() return properties.visual_reasoning_potential end
 		
 		-- public setters
 		self.set_unique_id = function(num) properties.unique_id = num end
