@@ -66,10 +66,23 @@
 			-- TODO: Add weights to each skill
 			
 			["abstract_reasoning_potential"] = constants.kUnknownNumber,
+			-- talent for logical thinking
+			
 			["strategic_reasoning_potential"] = constants.kUnknownNumber,
+			-- talent for thinking about future implications
+			
 			["practical_reasoning_potential"] = constants.kUnknownNumber,
+			-- talent for applying knowelge
+			
 			["realtime_reasoning_potential"] = constants.kUnknownNumber,
+			-- talent for "think on the feet"
+			
 			["visual_reasoning_potential"] = constants.kUnknownNumber,
+			-- talent for geometic or visual design thinking
+			
+			-- TODO: Add musical_reasoning_potential?
+			-- TODO: Add verbal_reasoning_potential?
+			-- TODO: Add written_reasoning_potential?
 		
 		}
 		
