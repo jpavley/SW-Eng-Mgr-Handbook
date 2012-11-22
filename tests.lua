@@ -69,6 +69,11 @@ test2_skills.set_written_expression_score(9)
 test2_skills.set_time_management_score(8)
 test2_skills.set_cooperation_ability_score(7)
 test2_skills.set_coping_ability_score(6)
+test2_skills.set_learning_ability_score(5)
+test2_skills.set_listening_ability_score(4)
+test2_skills.set_problem_solving_score(3)
+test2_skills.set_enthusiasm_score(2)
+test2_skills.set_flexibility_score(1)
 test2_skills.show()
 
 -- Composite person tests
