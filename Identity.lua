@@ -71,6 +71,7 @@ Class.new = function(unique_id, first_name, last_name)
 	-- public methods
 	
 	self.show = function()
+        print("**Identity**")
         local json = Json.Encode(properties)
         print(json)
 	end
