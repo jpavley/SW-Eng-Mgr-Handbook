@@ -31,19 +31,25 @@ require "constants"
 require "Json"
 
 -- ----------------------------------------------------------------------------
--- Experiences Class
+-- Education Class
 -- ----------------------------------------------------------------------------
--- Represents Work/Project History
+-- Represents Educational Background with a focus on "Higher Education"
 -- From the Wikipedia:
--- Experience as a general concept comprises knowledge of or skill of some 
--- thing or some event gained through involvement in or exposure to that thing
--- or event. The history of the word experience aligns it closely with the 
--- concept of experiment. For example, the word experience could be used in a 
--- statement like: "I have experience in fishing".
--- The concept of experience generally refers to know-how or procedural 
--- knowledge, rather than propositional knowledge: on-the-job training rather 
--- than book-learning. Philosophers dub knowledge based on experience 
--- "empirical knowledge" or "a posteriori knowledge".
+-- Education in its general sense is a form of learning in which knowledge, 
+-- skills, and habits of a group of people are transferred from one generation 
+-- to the next through teaching, training, research, or simply through 
+-- autodidacticism. Generally, it occurs through any experience that has a 
+-- formative effect on the way one thinks, feels, or acts.
+-- Higher education, also called tertiary, third stage, or post secondary 
+-- education, is the non-compulsory educational level that follows the 
+-- completion of a school providing a secondary education, such as a high 
+-- school or secondary school. Tertiary education is normally taken to 
+-- include undergraduate and postgraduate education, as well as vocational 
+-- education and training. Colleges and universities are the main institutions 
+-- that provide tertiary education. Collectively, these are sometimes known as 
+-- tertiary institutions. Tertiary education generally results in the receipt 
+-- of certificates, diplomas, or academic degrees.
+
 -- ----------------------------------------------------------------------------
 
 Class = {} -- the table to hold the class
@@ -57,26 +63,7 @@ Class.new = function(unique_id)
 		
 		
 		["unique_id"] = unique_id or constants.kUnknownString,
-		
-		-- experience is measured in years
-		
-		["startup"] = constants.kUnknownNumber,
-		["small_business"] = constants.kUnknownNumber,
-		["coporate"] = constants.kUnknownNumber,
-		-- types of businesses
-		
-		["technology_company"] = constants.kUnknownNumber,
-		["media_company"] = constants.kUnknownNumber,
-		["consulting_company"] = constants.kUnknownNumber,
-		["nonprofit_company"] = constants.kUnknownNumber,
-		-- focus on business
-		
-		["founder_role"] = constants.kUnknownNumber,
-		["executive_role"] = constants.kUnknownNumber,
-		["management_role"] = constants.kUnknownNumber,
-		["employee_role"] = constants.kUnknownNumber,
-		-- types of roles
-				
+						
 	}
 	
  	-- public getters
