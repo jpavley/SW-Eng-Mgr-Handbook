@@ -31,6 +31,7 @@ require "Identity"
 require "Personality"
 require "Skills"
 require "Aptitudes"
+require "Experiences"
 
 -- Identity unit tests
 
