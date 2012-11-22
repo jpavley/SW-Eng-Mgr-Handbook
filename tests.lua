@@ -30,6 +30,8 @@ require "constants"
 require "Identity"
 require "Personality"
 require "Skills"
+require "Aptitudes"
+
 -- Identity unit tests
 
 print("--- Identity ---")
@@ -75,6 +77,11 @@ test2_skills.set_problem_solving_score(3)
 test2_skills.set_enthusiasm_score(2)
 test2_skills.set_flexibility_score(1)
 test2_skills.show()
+
+-- Aptitudes unit tests
+
+test1_aptitudes = Aptitudes.Class.new()
+test1_aptitudes.show()
 
 -- Composite person tests
 
