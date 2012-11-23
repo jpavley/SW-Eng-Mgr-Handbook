@@ -28,7 +28,7 @@
 
 module(..., package.seeall)
 require "constants"
-require "Json"
+require "SWEMHB_Utilities"
 
 -- ----------------------------------------------------------------------------
 -- Experiences Class
@@ -48,15 +48,14 @@ require "Json"
 
 Class = {} -- the table to hold the class
 
-Class.new = function(unique_id)
+Class.new = function(tag)
 	local self = {} -- object of class
 	
 	-- private properties
 	
 	local properties  = { 
 		
-		
-		["unique_id"] = unique_id or constants.kUnknownString,
+		["tag"] = tag or constants.kUnknownString,
 		
 		-- Note: experience is measured in years, rounded down.
 		
@@ -109,21 +108,12 @@ Class.new = function(unique_id)
 	
 	-- create public accessors for properties
 	
-	for k,v in pairs(properties) do
-		-- for each property in properties table
-		-- create a getter for that property in the self table
-		self["get_" .. k] = function() return properties[k] end
-		-- create a setter for that property in the self table
-		self["set_" .. k] = function(num) properties[k] = num end
-	end
+	SWEMHB_Utilities.create_accessors_for_properites(self, properties)
 	
 	-- public methods
 	
 	self.show = function()
-        print("**Experiences**")
-        local json = Json.Encode(properties)
-        print(json)
-
+		SWEMHB_Utilities.print_properties_values(properties)
 	end
 		
 	return self -- return the object!

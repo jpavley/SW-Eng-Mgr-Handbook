@@ -27,6 +27,8 @@
 --]]
 
 module(..., package.seeall)
+require "Json"
+require "constants"
 
 -- ----------------------------------------------------------------------------
 -- Utilities
@@ -40,8 +42,15 @@ function create_accessors_for_properites(obj, props)
 	for k,v in pairs(props) do
 		-- for each property in properties table
 		-- create a getter for that property in the self table
-		obj["get_" .. k] = function() return properties[k] end
+		obj["get_" .. k] = function() return props[k] end
 		-- create a setter for that property in the self table
-		obj["set_" .. k] = function(num) properties[k] = num end
+		obj["set_" .. k] = function(num) props[k] = num end
 	end	
+end
+
+-- print properties and values as json
+
+function print_properties_values(props)
+	local json = Json.Encode(props)
+	print(json)
 end
