@@ -113,6 +113,7 @@ Class.new = function(tag)
 	-- public methods
 	
 	self.show = function()
+		print("**Experiences**")
 		SWEMHB_Utilities.print_properties_values(properties)
 	end
 		
