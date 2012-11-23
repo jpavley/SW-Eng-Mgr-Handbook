@@ -92,6 +92,12 @@ test2_aptitudes.set_realtime_reasoning_potential(2)
 test2_aptitudes.set_visual_reasoning_potential(1)
 test2_aptitudes.show()
 
+-- Experiences unit tests
+print("--- Experiences ---")
+test1_experiencs = Experiences.Class.new()
+test1_experiencs.show()
+
+
 -- Composite person tests
 
 print("--- Composite Person ---")

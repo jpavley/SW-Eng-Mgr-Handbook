@@ -60,9 +60,9 @@ Class.new = function(unique_id)
 		
 		-- experience is measured in years
 		
-		["startup"] = constants.kUnknownNumber,
+		["startup_business"] = constants.kUnknownNumber,
 		["small_business"] = constants.kUnknownNumber,
-		["coporate"] = constants.kUnknownNumber,
+		["corporate_buiness"] = constants.kUnknownNumber,
 		-- types of businesses
 		
 		["technology_company"] = constants.kUnknownNumber,
@@ -79,17 +79,23 @@ Class.new = function(unique_id)
 				
 	}
 	
- 	-- public getters
-	self.get_unique_id = function() return properties.unique_id end
+	-- create public accessors for properties
 	
-	-- public setters
-	self.set_unique_id = function(num) properties.unique_id = num end
+	for k,v in pairs(properties) do
+		-- for each property in properties table
+		-- create a getter for that property in the self table
+		self["get_" .. k] = function() return properties[k] end
+		-- create a setter for that property in the self table
+		self["set_" .. k] = function(name) properties[k] = num end
+	end
+	
 	-- public methods
 	
 	self.show = function()
         print("**Experiences**")
         local json = Json.Encode(properties)
         print(json)
+
 	end
 		
 	return self -- return the object!
