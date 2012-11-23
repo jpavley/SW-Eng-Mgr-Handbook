@@ -122,8 +122,10 @@ person.identity = test2_identity
 person.personality = test2_personality
 person.skills = test2_skills
 person.aptitudes = test2_aptitudes
+person.experiences = test2_experiences
 
 person.identity.show()
 person.personality.show()
 person.skills.show()
 person.aptitudes.show()
+person.experiences.show()

@@ -58,24 +58,52 @@ Class.new = function(unique_id)
 		
 		["unique_id"] = unique_id or constants.kUnknownString,
 		
-		-- experience is measured in years
+		-- Note: experience is measured in years, rounded down.
 		
-		["startup_business"] = constants.kUnknownNumber,
-		["small_business"] = constants.kUnknownNumber,
-		["corporate_business"] = constants.kUnknownNumber,
 		-- types of businesses
 		
-		["technology_company"] = constants.kUnknownNumber,
-		["media_company"] = constants.kUnknownNumber,
-		["consulting_company"] = constants.kUnknownNumber,
-		["nonprofit_company"] = constants.kUnknownNumber,
-		-- focus on business
+		["startup_business"] = constants.kUnknownNumber,
+		-- A true startup is a group of 2-5 founders and employees bootstrapping a business.
 		
-		["founder_role"] = constants.kUnknownNumber,
-		["executive_role"] = constants.kUnknownNumber,
-		["management_role"] = constants.kUnknownNumber,
-		["employee_role"] = constants.kUnknownNumber,
+		["small_business"] = constants.kUnknownNumber,
+		-- A small business has less than 100 people and can be public or private.
+		
+		["corporate_business"] = constants.kUnknownNumber,
+		-- A corporate business has more tha 100 people and can be pulbic or private.
+		
+		-- focus of company
+
+		["technology_company"] = constants.kUnknownNumber,
+		--  A company that provides goods or services based on a technology platform to consumers or businesses.
+		
+		["media_company"] = constants.kUnknownNumber,
+		-- A company that provides goods or services based on content to consumers.
+		
+		["consulting_company"] = constants.kUnknownNumber,
+		-- A company that provides a service to other companies.
+		
+		["nonprofit_company"] = constants.kUnknownNumber,
+		-- A company that is not organized around making a profit through their goods or services.
+		
 		-- types of roles
+
+		["founder_role"] = constants.kUnknownNumber,
+		-- A founder of a company, usually a startup. 
+		
+		["executive_role"] = constants.kUnknownNumber,
+		-- A senior leaders of a company.
+		
+		["management_role"] = constants.kUnknownNumber,
+		-- A middle manager of a company.
+		
+		["employee_role"] = constants.kUnknownNumber,
+		-- A paid worker or hired hand.
+		
+		["investor_role"] = constants.kUnknownNumber,
+		-- An investor who provides capital to a company
+		
+		["intern_role"] = constants.kUnknownNumber,
+		-- An unpaid worker or volunteer
 				
 	}
 	
