@@ -97,6 +97,20 @@ print("--- Experiences ---")
 test1_experiencs = Experiences.Class.new()
 test1_experiencs.show()
 
+test2_experiences = Experiences.Class.new("111-111-111")
+test2_experiences.set_startup_business(1)
+test2_experiences.set_corporate_business(2)
+test2_experiences.set_small_business(3)
+test2_experiences.set_nonprofit_company(4)
+test2_experiences.set_technology_company(5)
+test2_experiences.set_consulting_company(6)
+test2_experiences.set_media_company(7)
+test2_experiences.set_employee_role(8)
+test2_experiences.set_executive_role(9)
+test2_experiences.set_founder_role(10)
+test2_experiences.set_executive_role(11)
+
+test2_experiences.show()
 
 -- Composite person tests
 

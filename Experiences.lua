@@ -62,7 +62,7 @@ Class.new = function(unique_id)
 		
 		["startup_business"] = constants.kUnknownNumber,
 		["small_business"] = constants.kUnknownNumber,
-		["corporate_buiness"] = constants.kUnknownNumber,
+		["corporate_business"] = constants.kUnknownNumber,
 		-- types of businesses
 		
 		["technology_company"] = constants.kUnknownNumber,
@@ -86,7 +86,7 @@ Class.new = function(unique_id)
 		-- create a getter for that property in the self table
 		self["get_" .. k] = function() return properties[k] end
 		-- create a setter for that property in the self table
-		self["set_" .. k] = function(name) properties[k] = num end
+		self["set_" .. k] = function(num) properties[k] = num end
 	end
 	
 	-- public methods
