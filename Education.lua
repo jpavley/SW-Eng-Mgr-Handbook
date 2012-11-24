@@ -54,29 +54,37 @@ require "Json"
 
 Class = {} -- the table to hold the class
 
-Class.new = function(unique_id)
+Class.new = function(tag)
 	local self = {} -- object of class
 	
 	-- private properties
 	
 	local properties  = { 
 		
+		["tag"] = tag or constants.kUnknownString,
 		
-		["unique_id"] = unique_id or constants.kUnknownString,
-						
+		["associates_degree"] = false,
+		["bachelors_degree"] = false,
+		["masters_degree"] = false,
+		["doctors_degree"] = false,
+		
+		["computer_science"] = false,
+		["mathematics"] = false,
+		["visual_art"] = false,
+		["music"] = false,
+		["literature"] = false,
+		["philosophy"] = false,
 	}
 	
- 	-- public getters
-	self.get_unique_id = function() return properties.unique_id end
+	-- create public accessors for properties
 	
-	-- public setters
-	self.set_unique_id = function(num) properties.unique_id = num end
+	SWEMHB_Utilities.create_accessors_for_properites(self, properties)
+	
 	-- public methods
 	
 	self.show = function()
-        print("**Experiences**")
-        local json = Json.Encode(properties)
-        print(json)
+		print("**Education**")
+		SWEMHB_Utilities.print_properties_values(properties)
 	end
 		
 	return self -- return the object!

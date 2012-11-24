@@ -32,6 +32,7 @@ require "Personality"
 require "Skills"
 require "Aptitudes"
 require "Experiences"
+require "Education"
 
 -- Identity unit tests
 
@@ -111,6 +112,11 @@ test2_experiences.set_founder_role(10)
 test2_experiences.set_executive_role(11)
 
 test2_experiences.show()
+
+-- Education unit tests
+print("--- Education ---")
+test1_education = Education.Class.new()
+test1_education.show()
 
 -- Composite person tests
 
