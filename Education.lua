@@ -63,11 +63,24 @@ Class.new = function(tag)
 		
 		["tag"] = tag or constants.kUnknownString,
 		
+		-- Academic degrees from instituations of higher learning
+		-- While not a requirement some specialities in software
+		-- development can benefit greatly from an academic background:
+		-- language design, algorithm optimization, data structure design,
+		-- highly scalable systems, etc... But even in these areas there
+		-- are famous exceptions that make it difficult to infer a general
+		-- rule.
 		["associates_degree"] = false,
 		["bachelors_degree"] = false,
 		["masters_degree"] = false,
 		["doctors_degree"] = false,
 		
+		-- Areas of focus
+		-- A software engineer might have several majors or areas of focus
+		-- while pursing an education, especially if he or she is an 
+		-- autodidact. Great application developers working on consumer
+		-- products gain an advangate from mastering a "liberal art" to
+		-- learn the value of aesthetics and the creative process.
 		["computer_science_focus"] = constants.kUnknownNumber,
 		["mathematics_focus"] = constants.kUnknownNumber,
 		["visual_art_focus"] = constants.kUnknownNumber,
