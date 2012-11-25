@@ -131,6 +131,7 @@ test2_education.set_philosophy_focus(5)
 test2_education.set_visual_art_focus(6)
 test2_education.set_journalism_focus(7)
 
+test2_education.show()
 
 -- Composite person tests
 
@@ -143,9 +144,11 @@ person.personality = test2_personality
 person.skills = test2_skills
 person.aptitudes = test2_aptitudes
 person.experiences = test2_experiences
+person.education = test2_education
 
 person.identity.show()
 person.personality.show()
 person.skills.show()
 person.aptitudes.show()
 person.experiences.show()
+person.education.show()
