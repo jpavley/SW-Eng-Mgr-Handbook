@@ -44,7 +44,7 @@ function create_accessors_for_properites(obj, props)
 		-- create a getter for that property in the self table
 		obj["get_" .. k] = function() return props[k] end
 		-- create a setter for that property in the self table
-		obj["set_" .. k] = function(num) props[k] = num end
+		obj["set_" .. k] = function(arg) props[k] = arg end
 	end	
 end
 

@@ -118,6 +118,20 @@ print("--- Education ---")
 test1_education = Education.Class.new()
 test1_education.show()
 
+test2_education = Education.Class.new("111-111-111")
+test2_education.set_associates_degree(true)
+test2_education.set_bachelors_degree(true)
+test2_education.set_masters_degree(true)
+test2_education.set_doctors_degree(true)
+test2_education.set_literature_focus(1)
+test2_education.set_music_focus(2)
+test2_education.set_mathematics_focus(3)
+test2_education.set_computer_science_focus(4)
+test2_education.set_philosophy_focus(5)
+test2_education.set_visual_art_focus(6)
+test2_education.set_journalism_focus(7)
+
+
 -- Composite person tests
 
 print("--- Composite Person ---")
