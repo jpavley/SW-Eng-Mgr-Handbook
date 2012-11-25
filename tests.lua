@@ -30,6 +30,7 @@ require "constants"
 require "Identity"
 require "Personality"
 require "Skills"
+require "SW_Engineering_Skills"
 require "Aptitudes"
 require "Experiences"
 require "Education"
@@ -79,6 +80,26 @@ test2_skills.set_problem_solving_score(3)
 test2_skills.set_enthusiasm_score(2)
 test2_skills.set_flexibility_score(1)
 test2_skills.show()
+
+-- SW Engineering Skills unit tests
+print("--- SW Engineering Skills ---")
+test1_sw_eng_skills = SW_Engineering_Skills.Class.new()
+test1_sw_eng_skills.show()
+
+test2_sw_eng_skills = SW_Engineering_Skills.Class.new("111-111-111")
+test2_sw_eng_skills.set_security_design_score(1)
+test2_sw_eng_skills.set_system_desgin_score(2)
+test2_sw_eng_skills.set_client_architecture_score(3)
+test2_sw_eng_skills.set_debugging_concepts_score(4)
+test2_sw_eng_skills.set_functional_concepts_score(5)
+test2_sw_eng_skills.set_backend_architecture_score(6)
+test2_sw_eng_skills.set_software_patterns_score(7)
+test2_sw_eng_skills.set_oop_concepts_score(8)
+test2_sw_eng_skills.set_agile_concepts_score(9)
+test2_sw_eng_skills.set_unix_admin_score(10)
+
+test2_sw_eng_skills.show()
+
 
 -- Aptitudes unit tests
 print("--- Aptitudes ---")
@@ -142,6 +163,7 @@ person = {}
 person.identity = test2_identity
 person.personality = test2_personality
 person.skills = test2_skills
+person.sw_eng_skills = test2_sw_eng_skills
 person.aptitudes = test2_aptitudes
 person.experiences = test2_experiences
 person.education = test2_education
@@ -149,6 +171,7 @@ person.education = test2_education
 person.identity.show()
 person.personality.show()
 person.skills.show()
+person.sw_eng_skills.show()
 person.aptitudes.show()
 person.experiences.show()
 person.education.show()
