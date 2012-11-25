@@ -68,12 +68,13 @@ Class.new = function(tag)
 		["masters_degree"] = false,
 		["doctors_degree"] = false,
 		
-		["computer_science"] = false,
-		["mathematics"] = false,
-		["visual_art"] = false,
-		["music"] = false,
-		["literature"] = false,
-		["philosophy"] = false,
+		["computer_science_focus"] = constants.kUnknownNumber,
+		["mathematics_focus"] = constants.kUnknownNumber,
+		["visual_art_focus"] = constants.kUnknownNumber,
+		["music_focus"] = constants.kUnknownNumber,
+		["literature_focus"] = constants.kUnknownNumber,
+		["philosophy_focus"] = constants.kUnknownNumber,
+		["journalism_focus"] = constants.kUnknownNumber,
 	}
 	
 	-- create public accessors for properties
