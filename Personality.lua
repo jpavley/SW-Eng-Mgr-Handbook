@@ -44,14 +44,14 @@ require "Json"
 
 Class = {} -- the table to hold the class
 
-Class.new = function(unique_id)
+Class.new = function(tag)
 	local self = {} -- object of class
 	
 	-- private properties
     
     local properties = {
 
-		["unique_id"] = unique_id or constants.kUnknownString,
+		["tag"] = tag or constants.kUnknownString,
 		
 		-- The following five personality trait score are based on Lewis Goldberg's 
 		-- five-dimension personality model, nicknamed the "Big Five." I found this 
@@ -89,29 +89,15 @@ Class.new = function(unique_id)
 
     }
 
-	-- public getters
-	self.get_unique_id = function() return properties.unique_id end
-	self.get_openess_score = function() return properties.openess_score end
-	self.get_conscientiousness_score = function() return properties.conscientiousness_score end
-	self.get_extraversion_score = function() return properties.extraversion_score end
-	self.get_agreeableness_score = function() return properties.agreeableness_score end
-	self.get_neuroticism_score = function() return properties.neuroticism_score end
-
+	-- create public accessors for properties
 	
-	-- public setters
-	self.set_unique_id = function(num) properties.unique_id = num end
-	self.set_openess_score = function(num) properties.openess_score = num end
-	self.set_conscientiousness_score = function(num) properties.conscientiousness_score = num end
-	self.set_extraversion_score = function(num) properties.extraversion_score = num end
-	self.set_agreeableness_score = function(num) properties.agreeableness_score = num end
-	self.set_neuroticism_score = function(num) properties.neuroticism_score = num end
-
+	SWEMHB_Utilities.create_accessors_for_properites(self, properties)
+	
 	-- public methods
 	
 	self.show = function()
 		print("**Personality**")
-        local json = Json.Encode(properties)
-        print(json)
+		SWEMHB_Utilities.print_properties_values(properties)
 	end
 		
 	return self -- return the object!
